@@ -235,9 +235,10 @@ body{
           flex-direction: row;
           align-content: center;
           .sort{
-            padding-right: 50px;
+            padding-right: 10%;
           }
           select{
+            width: 200px;
             font-family: 'CenturyGothic';
             border: 0;
             outline: none;
@@ -247,13 +248,15 @@ body{
             -ms-appearance:none;
             background-image: url('../assets/img/arrow-down-black.png');
             background-repeat: no-repeat;
-            background-position: right;
+            background-position-x: right;
+            background-position-y: center;
             background-size: 11px 7px;
+            font-size: 1em;
           }
         }
         span:nth-child(2){
           font-family: 'CenturyGothic';
-          font-size: 0.5em;
+          font-size: 0.6em;
         }
       }
       .catalog-items{
@@ -261,6 +264,7 @@ body{
         flex-direction: row;
         width: 100%;
         .catalog-item{
+          position: relative;
           display: flex;
           flex-direction: column;
           margin: 0 15px;
@@ -288,6 +292,7 @@ body{
             }
             .add-to-favorite{
               position: absolute;
+              right: 15px;
               background-color: white;
               border-radius: 100px;
               margin-top: 20px;
@@ -374,19 +379,28 @@ body{
         margin-top: 44px;
         margin-bottom: 156px;
         width: 100%;
+        position: relative;
+        .next-page{
+          position: absolute;
+          right: 0;
+          top: 0;
+          line-height: 54px;
+          margin: 10px 0;
+        }
         .pages{
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
-          margin-left: 33%;
-          width: 30%;
+          justify-content: center;
           .page{
+            margin: 10px 0;
+            text-align: center;
+            line-height: 54px;
+            width: 54px;
             border-radius: 100px;
             font-family: 'BebasNeueBold';
             font-size: 20px;
-            width: 54px;
             transition: background-color 0.5s ease;
-            &:hover{
+            &.selected,&:hover{
               background-color: rgb(10,10,10);
               color: white;
               transition: background-color 0.5s ease;
@@ -401,6 +415,7 @@ body{
               margin: 20px;
             }
           }
+          
         }
       }
     }
