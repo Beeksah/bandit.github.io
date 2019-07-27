@@ -4,12 +4,24 @@ body {
   background-color: rgb(10, 10, 10);
   margin: 0;
   font-family: 'BebasNeueRegular';
-
+  .nowrap{
+    white-space: nowrap;
+  } 
   nav{
     float: left;
     color: white;
     width: 18%;
-    position: fixed;
+    position: static;
+    transition: all 0.5s ease;
+    &.fixed{
+      transition: all 0.5s ease;
+      position: fixed;
+      bottom: 0;
+    }
+    &.fixed-top{
+      transition: all 0.5s ease;
+      position: fixed;
+    }
     .menu{
       display: flex;
       flex-direction: column;
@@ -76,7 +88,7 @@ body {
             content: '2';
             left: 15px;
             background-color: red;
-            border-radius: 10px;
+            border-radius: 100px;
             margin: auto;
             line-height: 14px;
             font-size: 12px;
@@ -88,12 +100,17 @@ body {
         }
     
         .menu-search {
+          width: 100%;
           display: flex;
           flex-direction: row;
           align-items: center;
+          justify-content: space-between;
           margin-bottom: 84px;
           border-bottom: 2px solid rgb(38, 38, 38);
           padding-bottom: 17px;
+          span{
+            max-width: 80%;
+          }
           input {
             color: white;
             border: 0;
@@ -110,7 +127,6 @@ body {
     
           img {
             right: 50px;
-            position: absolute;
             width: 18px;
             height: 18px;
             padding-top: 10px;
@@ -162,6 +178,106 @@ body {
             img {
               width: 18px;
               height: 18px;
+            }
+          }
+        }
+      }
+    }
+    @media(min-width: 1200px) and (max-width: 1366px){
+      .menu{
+        margin: 35px;
+        .menu-logo {
+          margin-bottom: 50px;
+        }
+    
+        .menu-content{
+          .menu-item {
+            font-size: 1.2em;
+            margin-top: 18px;
+            margin-bottom: 36px;
+          }
+      
+          .menu-tools {
+            margin-bottom: 70px;
+            margin-top: 90px;
+            img {
+              width: 15px;
+              height: 15px;
+              padding: 12px;
+            }
+      
+            .menu-tool{
+              width: 39px;
+              height: 39px;
+              border-radius: 100px;
+      
+              &:hover {
+                border-radius: 100px;
+              }
+            }
+      
+            div span {
+              left: 12px;
+              border-radius: 100px;
+              line-height: 14px;
+              font-size: 12px;
+              min-width: 14px;
+              height: 14px;
+              top: -7px;
+            }
+          }
+      
+          .menu-search {
+            width: 100%;
+            margin-bottom: 65px;
+            padding-bottom: 14px;
+            span{
+              max-width: 80%;
+            }
+            input {
+              padding-top: 8px;
+      
+              &::placeholder {
+                font-size: 1.2em;
+              }
+            }
+      
+            img {
+              right: 50px;
+              width: 14px;
+              height: 14px;
+              padding-top: 8px;
+            }
+          }
+      
+          .menu-call {
+      
+            button {
+              width: 100%;
+              padding: 10px 0;
+              font-size: 1.2em;
+            }
+      
+            .phone {
+              margin-top: 24px;
+              margin-bottom: 36px;
+              font-size: 1.4em;
+            }
+          }
+      
+          .menu-links {
+            font-size: 0.6em;
+            
+            span {
+              padding: 10px 0;
+            }
+      
+            .social-links {
+              padding: 10px 15%;
+              img {
+                width: 18px;
+                height: 18px;
+              }
             }
           }
         }
@@ -254,7 +370,7 @@ body {
           }
 
           select {
-            background-color: white;
+            background-color:white;
             width: 210px;
             font-family: 'CenturyGothic';
             border: 0;
