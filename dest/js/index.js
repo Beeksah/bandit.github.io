@@ -40,3 +40,16 @@ window.addEventListener("scroll", function(){
         amountscrolled()
     }, 50)
 }, false)
+
+var menubtn = document.getElementById('menu-btn');
+var smallmenu = document.getElementById('small-menu-content');
+menubtn.addEventListener('click', function(){
+    if(smallmenu.classList.contains('hidden')){
+        smallmenu.classList.remove('hidden');
+        menubtn.src="assets/img/menu-white-close.png";
+    }
+    else{
+        smallmenu.classList.add('hidden');
+        menubtn.src="assets/img/menu-white.png";
+    }
+})
