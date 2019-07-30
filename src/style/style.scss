@@ -1,6 +1,8 @@
 @import './fonts.scss';
 
 body {
+  width: inherit;
+    margin: 0 auto;
   background-color: rgb(10, 10, 10);
   margin: 0;
   font-family: 'BebasNeueRegular';
@@ -1308,7 +1310,7 @@ body {
               text-align: center;
               margin-top: 25px;
               margin-bottom: 30px;
-              font-size: 1em;
+              font-size: 1.2em;
             }
           }
 
@@ -1317,7 +1319,7 @@ body {
             flex-direction: column;
             align-content: center;
             font-family: 'CenturyGothic';
-            font-size: 0.5em;
+            font-size: 0.7em;
 
             span {
               padding: 10px 0;
@@ -1684,7 +1686,7 @@ body {
             .footer-pages-line {
               display: flex;
               flex-direction: column;
-              font-size: 0.5em;
+              font-size: 0.6em;
 
               .footer-page {
                 margin: 10px 15px;
@@ -1721,7 +1723,7 @@ body {
     }
   }
 
-  @media(max-width:799px) {
+  @media(min-width:576px)and(max-width:799px) {
     .big-menu {
       display: none
     }
@@ -2136,6 +2138,467 @@ body {
 
           .footer-pages {
             width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .footer-pages-line {
+              display: flex;
+              flex-direction: column;
+              font-size: 0.7em;
+
+              .footer-page {
+                margin: 5px 10px;
+              }
+            }
+          }
+        }
+
+        .footer-bottom {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 35px 20px 35px;
+
+          span {
+            font-size: 0.6em;
+            color: rgb(153, 153, 153);
+            font-family: 'CenturyGothic';
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+
+            img {
+              margin-left: 10px;
+              width: 50px;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+  @media(max-width:575px) {
+    .big-menu {
+      display: none
+    }
+
+    .small-menu {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+      top: 0;
+      background-color: rgb(10, 10, 10);
+      left: 0;
+      right: 0;
+      .small-menu-top {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .small-menu-top-elements {
+          display: flex;
+          flex-direction: row;
+
+          .small-menu-top-element {
+            position: relative;
+            img {
+              width: 15px;
+              height: 15px;
+              padding: 8px;
+            }
+
+            span {
+              position: absolute;
+              border-radius: 100px;
+              background-color: rgb(248, 24, 36);
+              width: 15px;
+              height: 15px;
+              font-size: 12px;
+              text-align: center;
+              left: 8px;
+              top: -10px;
+            }
+          }
+        }
+
+        .small-menu-logo {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+      .small-menu-content{
+        transition: 0.5s ease;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .small-menu-element{
+          width: 150px;
+          font-size: 1.4em;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          img{
+            margin-left: 20px;
+            width: 15px;
+          }
+        }
+      }
+      .hidden{
+        display: none;
+      }
+    }
+
+    .content {
+      background-color: white;
+      margin-top: 50px;
+
+      .upper-line {
+        position: relative;
+        font-family: 'BebasNeueBold';
+
+        img {
+          width: 100%;
+          vertical-align: middle;
+        }
+
+        .darkened::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        span {
+          margin-left: 5%;
+          line-height: 240px;
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+          color: white;
+          font-size: 2em; 
+        }
+      }
+
+      .categories {
+        padding: 20px;
+        padding-bottom: 25px;
+        border-bottom: 2px solid rgb(245, 245, 245);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: 'BebasNeueBold';
+
+        .categories-item {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: rgb(248, 24, 36);
+          padding: 10px 0;
+          width: 47%;
+          color: white;
+          font-size: 0.8em;
+
+          img {
+            width: 10px;
+            height: 5px;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .catalog {
+        margin: 30px 5%;
+
+        .catalog-sort {
+          
+          font-family: 'BebasNeueBold';
+          padding: 0 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 30px;
+
+          span {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+
+            .sort {
+              padding-right: 10px;
+            }
+
+            select {
+              background-color: white;
+              width: 90px;
+              font-family: 'CenturyGothic';
+              border: 0;
+              outline: none;
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              -ms-appearance: none;
+              background-image: url('../assets/img/arrow-down-black.png');
+              background-repeat: no-repeat;
+              background-position-x: right;
+              background-position-y: center;
+              background-size: 11px 7px;
+              font-size: 1em;
+            }
+          }
+
+          span:nth-child(2) {
+            font-family: 'CenturyGothic';
+            font-size: 0.6em;
+          }
+        }
+
+        .catalog-items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+
+          .catalog-item-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 49%;
+
+            .catalog-item {
+              margin: 0 8px;
+
+              .catalog-item-photo {
+                width: 100%;
+
+                .new-item {
+                  font-family: 'CenturyGothic';
+                  font-size: 0.5em;
+                  font-weight: bold;
+                  position: absolute;
+                  color: rgb(248, 24, 36);
+                  text-align: center;
+                  padding: 5px 0;
+                  background-color: white;
+                  width: 60px;
+                  margin-left: 10px;
+                  margin-top: 10px;
+                }
+
+                .add-to-favorite {
+                  position: absolute;
+                  right: 15px;
+                  background-color: white;
+                  border-radius: 100px;
+                  margin-top: 10px;
+                  width: 25px;
+                  height: 25px;
+
+                  img {
+                    margin: 5px;
+                    width: 15px;
+                    height: 15px;
+                  }
+                }
+
+                .main-photo {
+                  width: 100%;
+                }
+              }
+
+              .catalog-item-info {
+                margin: 20px 0;
+                font-family: 'CenturyGothic';
+                display: flex;
+                flex-direction: column;
+
+                .item-info-title {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  font-size: 0.7em;
+                  height: 100px;
+
+                  div {
+                    background-color: rgb(248, 24, 36);
+                    margin-right: 2px;
+                    border-radius: 100px;
+                    height: 20px;
+                    width: 20px;
+                    span{
+                      max-width: 50%;
+                    }
+                    img {
+                      padding: 5px;
+                      width: 10px;
+                      height: 10px;
+                    }
+                  }
+                }
+
+                .item-cost {
+                  font-family: 'BebasNeueBold';
+                  font-size: 1em;
+                  margin-bottom: 30px;
+                  margin-top: 20px;
+
+                  div {
+                    font-family: 'CenturyGothic';
+                    font-weight: bolder;
+                    font-size: 0.8em;
+                    margin-bottom: 20px;
+                  }
+
+                  a {
+                    color: red;
+                    position: relative;
+                    text-decoration: none;
+
+                    &:after {
+                      content: '';
+                      width: 100%;
+                      position: absolute;
+                      left: 0;
+                      bottom: 3px;
+                      border-width: 0 0 1px;
+                      border-style: solid;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .catalog-pages {
+          margin-bottom: 80px;
+          width: 100%;
+          position: relative;
+
+          .next-page {
+            display: none;
+            font-family: "Century Gothic";
+            position: absolute;
+            right: 30px;
+            top: 0;
+            line-height: 54px;
+
+            img {
+              margin-left: 20px;
+            }
+          }
+
+          .pages {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .page {
+              margin: 5px 0;
+              text-align: center;
+              line-height: 30px;
+              width: 30px;
+              border-radius: 100px;
+              font-family: 'BebasNeueBold';
+              font-size: 15px;
+              transition: background-color 0.5s ease;
+
+              &.selected,
+              &:hover {
+                background-color: rgb(10, 10, 10);
+                color: white;
+                transition: background-color 0.5s ease;
+
+                img {
+                  display: none;
+                }
+
+                .selected {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      footer {
+        background-color: rgb(240, 240, 240);
+
+        .footer-links {
+          padding: 20px;
+          padding-bottom: 30px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: solid rgb(233, 233, 233) 2px;
+
+          img {
+            width: 25px;
+            height: 25px;
+          }
+
+          .footer-social-links {
+            margin-left: 10%;
+
+            img {
+              width: 10px;
+              height: 10px;
+              margin: 0 10px;
+            }
+          }
+
+          .footer-subscribe-button {
+            display: inline-block;
+            width: 20%;
+            font-size: 0.7em;
+            text-align: center;
+            line-height: 30px;
+            width: 100px;
+            background-color: rgb(10, 10, 10);
+            color: white;
+          }
+        }
+
+        .down-footer {
+          font-family: 'CenturyGothic';
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          .footer-phone {
+            display: flex;
+            flex-direction: column;
+            font-weight: bolder;
+            font-size: 0.8em;
+            margin-bottom: 30px;  
+            span:nth-child(2) {
+              font-weight: normal;
+              margin: 10px 0;
+            }
+          }
+
+          .footer-pages {
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
