@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var scss = require('gulp-sass');
 var del = require('del');
 var gulpnewer = require('gulp-newer');
+var uglify = require('gulp-uglify');
 
 gulp.task('TestTask', function(){
     console.log('I am working!!!');
@@ -44,7 +45,9 @@ gulp.task('js', function(){
     return gulp.src('./src/js/**/*.js', {
         since: gulp.lastRun('js')
     })
-    .pipe(gulpnewer('dest/js')).pipe(gulp.dest('dest/js'));
+    .pipe(gulpnewer('dest/js'))
+    .pipe(uglify({compress:true}))
+    .pipe(gulp.dest('dest/js'));
 })
 
 gulp.task('node_modules', function(){

@@ -1,4 +1,4 @@
-var bodies = document.getElementsByTagName('body');
+/*var bodies = document.getElementsByTagName('body');
 var body = bodies[0]
 var nav = document.getElementById('menu');
 window.onscroll = function(){
@@ -39,7 +39,7 @@ window.addEventListener("scroll", function(){
         throttlescroll = setTimeout(function(){ 
         amountscrolled()
     }, 50)
-}, false)
+}, false)*/
 
 var menubtn = document.getElementById('menu-btn');
 var smallmenu = document.getElementById('small-menu-content');
@@ -51,5 +51,19 @@ menubtn.addEventListener('click', function(){
     else{
         smallmenu.classList.add('hidden');
         menubtn.src="assets/img/menu-white.png";
+    }
+})
+
+
+var ctgfirst = document.getElementsByClassName('first')[0];
+var ctgcontent = document.getElementsByClassName('categories-content')[0];
+ctgfirst.addEventListener('click', function(){
+    if(ctgfirst.classList.contains('opened')){
+        ctgfirst.classList.remove('opened');
+        ctgcontent.classList.add('hidden');
+    }
+    else{
+        ctgfirst.classList.add('opened');
+        ctgcontent.classList.remove('hidden');
     }
 })

@@ -15,5 +15,9 @@
     "gulp": "^4.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^3.2.1"
+  },
+  "devDependencies": {
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
